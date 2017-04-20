@@ -364,6 +364,10 @@ body{
 }
 
 @media screen and (max-device-width: 640px){
+
+  .container{
+    padding: 0 !important;
+  }
   .carrousel-item, .slick-slide {
     height: 520px !important;
   }
