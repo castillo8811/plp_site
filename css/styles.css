@@ -134,6 +134,10 @@ body{
   background-color: white;
 }
 
+.navbar-collapse{
+  background-color: grey;
+}
+
 .menu{
   margin: 0 auto;
   width: 53%;
@@ -147,7 +151,7 @@ body{
 }
 
 #content-wrapper{
-  margin-top: 56px;
+  margin-top: 50px;
 }
 
 #header-wrapper .navbar, #header-wrapper .navbar-default{
@@ -162,8 +166,9 @@ body{
   padding: 0 !important;
 }
 
-#header-wrapper nav{
+#header-wrapper .navbar-header{
   padding: 3px 15px 3px 15px;
+  width: 105%;
 }
 
 #header-wrapper .navbar{
@@ -327,9 +332,15 @@ body{
   margin-bottom: 10px;
 }
 
+#footer1{
+  margin-left: 5px;
+  margin-right: 5px;
+}
 #footer2{
   color: #3c3c3c;
   text-align: right;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #footer2 ul{
@@ -366,8 +377,9 @@ body{
 @media screen and (max-device-width: 640px){
 
   .container{
-    padding: 0 !important;
+    padding: 0px !important;
   }
+
   .carrousel-item, .slick-slide {
     height: 520px !important;
   }
@@ -382,8 +394,23 @@ body{
     height: 60px;
   }
 
+  .menu{
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
   .menu li {
     width: 100%;
     text-align: center;
+    border-bottom: solid 1px white;
+  }
+
+  .menu li:last-child{
+    border: none;
+  }
+
+  #servicios-wrapper, #contacto{
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
