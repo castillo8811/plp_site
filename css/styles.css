@@ -134,10 +134,6 @@ body{
   background-color: white;
 }
 
-.navbar-collapse{
-  background-color: grey;
-}
-
 .menu{
   margin: 0 auto;
   width: 53%;
@@ -168,7 +164,6 @@ body{
 
 #header-wrapper .navbar-header{
   padding: 3px 15px 3px 15px;
-  width: 105%;
 }
 
 #header-wrapper .navbar{
@@ -213,6 +208,15 @@ body{
   height: 400px; !important;
   position: relative;
 }
+
+.servicios-page-item {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  height: 400px; !important;
+  position: relative;
+}
+
 .slick-slide{
   height: 400px !important;
   margin: 0 5px 0 5px;
@@ -373,6 +377,86 @@ body{
   width: 100%;
   font-weight: bold;
 }
+.servicios-page-stage{
+  padding: 10px 20px 0px 20px;
+}
+.servicios-page-text{
+  color: yellow;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.servicios-page-text span{
+  color: white;
+  font-size: 16px;
+}
+
+.servicios-page-detail p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.servicios-page-detail ul{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+
+.servicios-page-detail ul li{
+  margin-top: 10px;
+}
+
+.servicios #contact-form button{
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  width: 200px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5%;
+  float: none;
+  text-align: center;
+  display: block;
+
+}
+
+.servicios .servicios-form{
+  border-top: solid 1px grey;
+  border-bottom: solid 1px grey;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.servicios .servicios-form img{
+  width: 35%;
+}
+
+.servicios .servicios-form .servicios-form-inner{
+  margin: 0 auto;
+  float: none;
+}
+
+.servicios-page-stage img{
+  width: 80%;
+}
+
+#empresas-inner{
+  margin: 0 auto;
+  float: none;
+  display: block;
+}
+
+#empresas-inner img{
+  display: block;
+  margin: 0 auto;
+}
+
+#empresas-inner div{
+  margin-right: 30px;
+}
+
 
 @media screen and (max-device-width: 640px){
 
@@ -412,5 +496,21 @@ body{
   #servicios-wrapper, #contacto{
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .servicios-page-detail{
+    padding: 10px;
+  }
+
+  .servicios-page-text span {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #header-wrapper .navbar-header{
+    padding: 3px 15px 3px 15px;
+    width: 105%;
   }
 }
