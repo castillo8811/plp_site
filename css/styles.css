@@ -377,9 +377,13 @@ body{
   width: 100%;
   font-weight: bold;
 }
+
 .servicios-page-stage{
   padding: 10px 20px 0px 20px;
+  width: 100%;
+  margin: 0 auto;
 }
+
 .servicios-page-text{
   color: yellow;
   font-size: 30px;
