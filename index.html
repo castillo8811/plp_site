@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="example359" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8" />
     <title>PLP Comunicación</title>
     <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,14 +13,14 @@
     <link href="css/slick-theme.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
 
+    <!-- add javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 <div class="site-wrapper">
@@ -37,15 +36,15 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><img height="80" src="img/desktop_logo_plp_top.png" /></a>
+                        <a class="navbar-brand" href="#!/"><img height="80" src="img/desktop_logo_plp_top.png" /></a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                         </ul>
                         <ul class="nav navbar-nav navbar-center menu">
-                            <li><a href="/servicios.html../navbar/">Servicios</a></li>
-                            <li><a href="/contacto.html">Contacto</a></li>
-                            <li><a href="/proyectos.html">Colaboraciones</a></li>
+                            <li><a href="#!/servicios">Servicios</a></li>
+                            <li><a href="#!/contacto">Contacto</a></li>
+                            <li><a href="#!/proyectos">Colaboraciones</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div>
@@ -53,153 +52,8 @@
         </div>
     </div>
     <div id="content-wrapper" class="container">
-        <div id="carrousel-wrapper" class="carrousel">
-            <div class="carrousel-item orange">
-                <h2 class="text-center text-bold">Inicia tus proyectos digitales</h2>
-                <div class="carroulse-text col-lg-6"><p>Te explicamos de la forma más clara cómo iniciar tu primer
-                    proyecto en Internet. Si ya cuentas con uno, te ayudamos a crecer y llegar a tus metas.</p></div>
-                <div class="col-lg-6"><img src="img/desktop_carrusel_01_escritorio.png"/></div>
-                <div class="text-center"><a>Más Información</a></div>
-            </div>
-            <div class="carrousel-item yellow">
-                <h2 class="text-center text-bold">Apoyamos tu crecimiento</h2>
-                <div class="col-lg-6"><p>Estamos enfocados en Estrategias Digitales Integrales para ofrecerte las
-                    mejores opciones para tu negocio, producto o servicio.</p></div>
-                <div class="col-lg-6"><img src="img/desktop_carrusel_02_crecimiento.png"/></div>
-                <div class="text-center"><a>Más Información</a></div>
-            </div>
-            <div class="carrousel-item oranged">
-                <h2 class="text-center text-bold">¡Contáctanos!</h2>
-                <div class="col-lg-6"><p>Permitenos conocerte para saber la forma correcta de apoyar tus proyectos. Haz
-                    una cita ahora y cuéntanos tus ideas o necesidades.</p></div>
-                <div class="col-lg-6"><img src="img/desktop_carrusel_03_contactanos.png"/></div>
-                <div class="text-center"><a>Más Información</a></div>
-            </div>
-        </div>
-
-        <div id="servicios-wrapper">
-            <h2 class="text-center text-bold header">NUESTROS SERVICIOS</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="g-pink servicios-item">
-                        <img src="img/01_icono_portales_internet.png" />
-                        <h2>PORTALES DE INTERNET</h2>
-                        <p>
-                        Tener un sitio web no se trata solo de poner datos, se trata de conocer a tus clientes y sus necesidades. Sobretodo que sepan cuándo contactarte, cómo les puedes ayudar y qué puedes ofrecerles.
-                        </p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="g-yellow servicios-item">
-                        <img src="img/02_icono_estrategias_reputacion.png" />
-                        <h2>ESTRATEGIA CREO, (CRISIS Y REPUTACIÓN ON LINE)* </h2>
-                        <p>
-                        Diseñamos protocolos de prevención y soluciones, ante riesgos y/o crisis que pueda sufrir tu imagen pública debido a mensajes publicados en Redes Sociales.
-                        *Exclusivo de PLP
-                        </p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="g-blue servicios-item">
-                        <img src="img/03_icono_redes_sociales.png" />
-                        <h2>ESTRATEGIAS EN REDES SOCIALES</h2>
-                        <p>
-                        Contamos con especialistas en redes sociales y community management que configurarán un plan de social media óptimo para alcanzar tus objetivos.
-                        </p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                      <div class="g-orange servicios-item">
-                          <img src="img/04_icono_comercio_electronico.png" />
-                        <h2>COMERCIO ELECTRÓNICO</h2>
-                        <p>
-                        Te ayudamos a crear y fortalecer tu negocio en línea. Y te orientamos sobre la instalación de cobro y pago en tiendas de conveniencia.
-                        </p>
-                          <div class="text-center"><a>Más Información</a></div>
-                      </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="g-red servicios-item">
-                        <img src="img/05_icono_campanas_digitales.png" />
-                        <h2>CAMPAÑAS DIGITALES</h2>
-                        <p>Generamos la mejor estrategia de publicidad (gráfica y escrita) para medios on line.</p>
-                        <p>Creamos tus estrategias de Newsletter, Google Adsense, Google Adwords y redes sociales.</p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 ">
-                    <div class="g-green servicios-item">
-                        <img src="img/06_icono_contenidos_web.png" />
-                        <h2>CONTENIDOS WEB</h2>
-                        <p>Creamos estrategias de comunicación escrita que favorezcan el posicionamiento en buscadores. Generamos contenidos originales y tenemos la capacidad de tropicalizar los textos para público de regiones geográficas específicas.</p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="g-olive servicios-item">
-                        <img src="img/07_icono_aplicaciones_moviles.png" />
-                        <h2>APLICACIONES MÓVILES</h2>
-                        <p>Las APP son una buena opción para ofrecer una experiencia óptima en diversos dispositivos como tabletas o teléfonos móviles.</p>
-                        <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 ">
-                    <div class="g-purple servicios-item">
-                        <img src="img/08_icono_cursos.png" />
-                    <h2>CURSOS</h2>
-                    <p>Ofrecemos diversos cursos para empresas como: experiencias de usuarios (UX), medición e interpretación de datos (Big data), optimización de redes sociales y posicionamiento SEO para buscadores.</p>
-                    <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="g-dark-red servicios-item">
-                    <img src="img/09_icono_consultorias.png" />
-                    <h2>CONSULTORÍAS</h2>
-                    <p>Te ayudamos a saber si tu equipo de trabajo, agencia o proveedor te esta ofreciendo el mejor servicio, auditamos su servicios y procesos para llegar a los objetivos deseados.</p>
-                    <div class="text-center"><a>Más Información</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="empresas" class="container">
-            <div id="empresas-inner" class="row">
-                <h2 class="header text-center">EMPRESAS QUE CONFIARON EN NOSOTROS</h2>
-                <div class="col-lg-2">
-                    <img src="img/desktop_logo_byn_musica_banda.png" />
-                </div>
-                <div class="col-lg-2">
-                    <img src="img/desktop_logo_byn_impulsarte_radio.png" />
-                </div>
-                <div class="col-lg-2">
-                    <img src="img/desktop_logo_byn_imagen_tv.png" />
-                </div>
-                <div class="col-lg-2">
-                    <img src="img/desktop_logo_byn_capital.png" />
-                </div>
-                <div class="col-lg-2">
-                    <img src="img/desktop_logo_byn_efecto_fresa.png" />
-                </div>
-            </div>
-        </div>
-        <div id="contacto">
-            <div id="contact-form" class="col-lg-5 center-block">
-                <h2 class="text-center text-bold header">HAGAMOS HISTORIA JUNTOS</h2>
-                <span class="text-center text-bold center-block">Contáctanos!</span>
-                <form>
-                    <input class="center-block" placeholder="Nombre" type="text" />
-                    <input class="center-block" placeholder="Correo electrónico" type="text" />
-                    <input class="center-block" placeholder="Número telefónico" type="text" />
-                    <textarea class="center-block" placeholder="Cuéntanos cómo te podemos ayudar?"></textarea>
-                    <button class="text-center center-block" type="submit"><img src="img/mobile_icono_contacto.png" />Enviar</button>
-                </form>
-            </div>
+        <div style="position:relative">
+            <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
         </div>
         <div id="footer1" class="pink col-lg-12">
             <div class="col-lg-6 bottom-menu">
@@ -272,4 +126,5 @@
     });
 </script>
 </body>
+
 </html>
