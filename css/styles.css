@@ -336,10 +336,6 @@ body{
   margin-bottom: 10px;
 }
 
-#footer1{
-  margin-left: 5px;
-  margin-right: 5px;
-}
 #footer2{
   color: #3c3c3c;
   text-align: right;
@@ -461,7 +457,38 @@ body{
   margin-right: 30px;
 }
 
+#proyectos-inner h3{
+  margin-bottom: 50px;
+  font-weight: bold;
+}
 
+#proyectos-inner span{
+  display: block
+}
+
+#proyectos-inner .brand{
+  color:dodgerblue;
+  font-weight: bold;
+}
+
+
+#proyectos-inner img{
+  width: 40%;
+  border: solid 1px black;
+}
+
+#proyectos-inner .proyecto-detalle{
+  width: 50%;
+  margin-left: 10px;
+}
+
+#proyectos-inner .row{
+  margin-bottom: 30px;
+}
+
+#proyectos-inner .proyecto-item{
+  margin-bottom: 20px;
+}
 @media screen and (max-device-width: 640px){
 
   .container{
@@ -506,6 +533,10 @@ body{
     padding: 10px;
   }
 
+  .servicios-page-text {
+    margin-top: 10px;
+  }
+
   .servicios-page-text span {
     display: block;
     text-align: left;
@@ -516,5 +547,20 @@ body{
   #header-wrapper .navbar-header{
     padding: 3px 15px 3px 15px;
     width: 105%;
+  }
+
+  .servicios-page-stage img {
+    margin: 0 auto;
+    display: block;
+    float: none;
+  }
+
+  #proyectos-inner.row, #proyectos-inner .row{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #proyectos-inner .proyecto-item{
+    margin-bottom: 20px;
   }
 }
