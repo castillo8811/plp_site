@@ -1,0 +1,119 @@
+<div id="servicios-wrapper">
+    <h2 class="text-center text-bold header">OTROS SERVICIOS</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="g-pink servicios-item">
+                <img src="img//01_icono_portales_internet.png" />
+                <h2>PORTALES DE INTERNET</h2>
+                <p>
+                    Tener un sitio web no se trata solo de poner datos, se trata de conocer a tus clientes y sus necesidades. Sobretodo que sepan cuándo contactarte, cómo les puedes ayudar y qué puedes ofrecerles.
+                </p>
+                <div class="text-center"><a href="#!/servicios/portales-internet" data-service="portales-internet">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="g-yellow servicios-item">
+                <img src="img//02_icono_estrategias_reputacion.png" />
+                <h2>ESTRATEGIA CREO, (CRISIS Y REPUTACIÓN ON LINE)* </h2>
+                <p>
+                    Diseñamos protocolos de prevención y soluciones, ante riesgos y/o crisis que pueda sufrir tu imagen pública debido a mensajes publicados en Redes Sociales.
+                    *Exclusivo de PLP
+                </p>
+                <div class="text-center"><a data-service="creo">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="g-blue servicios-item">
+                <img src="img//03_icono_redes_sociales.png" />
+                <h2>ESTRATEGIAS EN REDES SOCIALES</h2>
+                <p>
+                    Contamos con especialistas en redes sociales y community management que configurarán un plan de social media óptimo para alcanzar tus objetivos.
+                </p>
+                <div class="text-center"><a data-service="social-media">Más Información</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="g-orange servicios-item">
+                <img src="img//04_icono_comercio_electronico.png" />
+                <h2>COMERCIO ELECTRÓNICO</h2>
+                <p>
+                    Te ayudamos a crear y fortalecer tu negocio en línea. Y te orientamos sobre la instalación de cobro y pago en tiendas de conveniencia.
+                </p>
+                <div class="text-center"><a data-service="e-comerce">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="g-red servicios-item">
+                <img src="img//05_icono_campanas_digitales.png" />
+                <h2>CAMPAÑAS DIGITALES</h2>
+                <p>Generamos la mejor estrategia de publicidad (gráfica y escrita) para medios on line.</p>
+                <p>Creamos tus estrategias de Newsletter, Google Adsense, Google Adwords y redes sociales.</p>
+                <div class="text-center"><a data-service="digital-campaing">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4 ">
+            <div class="g-green servicios-item">
+                <img src="img//06_icono_contenidos_web.png" />
+                <h2>CONTENIDOS WEB</h2>
+                <p>Creamos estrategias de comunicación escrita que favorezcan el posicionamiento en buscadores. Generamos contenidos originales y tenemos la capacidad de tropicalizar los textos para público de regiones geográficas específicas.</p>
+                <div class="text-center"><a data-service="web-content">Más Información</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="g-olive servicios-item">
+                <img src="img//07_icono_aplicaciones_moviles.png" />
+                <h2>APLICACIONES MÓVILES</h2>
+                <p>Las APP son una buena opción para ofrecer una experiencia óptima en diversos dispositivos como tabletas o teléfonos móviles.</p>
+                <div class="text-center"><a data-service="movile-apps">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4 ">
+            <div class="g-purple servicios-item">
+                <img src="img//08_icono_cursos.png" />
+                <h2>CURSOS</h2>
+                <p>Ofrecemos diversos cursos para empresas como: experiencias de usuarios (UX), medición e interpretación de datos (Big data), optimización de redes sociales y posicionamiento SEO para buscadores.</p>
+                <div class="text-center"><a data-service="courses">Más Información</a></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="g-dark-red servicios-item">
+                <img src="img//09_icono_consultorias.png" />
+                <h2>CONSULTORÍAS</h2>
+                <p>Te ayudamos a saber si tu equipo de trabajo, agencia o proveedor te esta ofreciendo el mejor servicio, auditamos su servicios y procesos para llegar a los objetivos deseados.</p>
+                <div class="text-center"><a data-service="consulting">Más Información</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.servicios-item a').click(function () {
+            service = $(this).attr('data-service');
+            if($('#' + service).length) {
+                $('.servicios-page-element').addClass('hidden');
+                $('#' + service).removeClass('hidden');
+
+                $('html, body').animate({
+                    scrollTop: $('#header-wrapper').offset().top
+                }, 500);
+            }
+        });
+
+        url_parts=location.toString().split('/');
+
+        service=url_parts[url_parts.length-1];
+        console.log(service);
+        if($('#' + service).length) {
+            $('.servicios-page-element').addClass('hidden');
+            $('#' + service).removeClass('hidden');
+
+            $('html, body').animate({
+                scrollTop: $('#header-wrapper').offset().top
+            }, 500);
+        }
+    });
+</script>
