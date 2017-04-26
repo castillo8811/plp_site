@@ -5,7 +5,7 @@
         <form id="contact-form-element">
             <input id="name" required  name="nombre" class="center-block" placeholder="Nombre" type="text" />
             <input id="email" data-validation="email" required name="email" class="center-block" placeholder="Correo electrónico" type="text" />
-            <input id="telefono"  name="telefono" class="center-block" placeholder="Número telefónico" type="text" />
+            <input id="telefono"  name="telefono" data-validation="telephone" class="center-block" placeholder="Número telefónico" type="text" />
             <textarea id="mensaje" required name="mensaje" class="center-block" placeholder="Cuéntanos, ¿cómo te podemos ayudar?"></textarea>
             <button id="contact-form-button" class="text-center center-block" type="submit"><img src="img/mobile_icono_contacto.png" /> Enviar</button>
         </form>
@@ -23,7 +23,20 @@
 <script>
 
     $.validate({
-        form : '#contact-form-element'
+        form : '#contact-form-element',
+        rules: {
+            telefono: {
+                matches: "[0-9]+", minlength: 10, maxlength: 10
+            },
+            email: {
+                required: "Campo obligatorio",
+            },
+        },
+        messages: {
+            email: {
+                remote: 'Por favor introduce un email valido',
+            },
+        },
     });
 
     $("#contact-form-element").submit(function(e) {
