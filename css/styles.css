@@ -492,6 +492,12 @@ body{
   margin-bottom: 30px;
 }
 
+.empresas-carrousel .carrousel-item, .empresas-carrousel .slick-slide {
+  height: auto !important;
+}
+
+
+
 #proyectos-inner .proyecto-item{
   margin-bottom: 20px;
 }
