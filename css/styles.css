@@ -136,7 +136,7 @@ body{
 
 .menu{
   margin: 0 auto;
-  width: 53%;
+  width: 80%;
   float: none;
   font-size: 16px;
   font-weight: bold;
@@ -278,8 +278,13 @@ body{
   cursor: pointer;
 }
 
-#contacto{
+#contacto, #contacto-gracias {
   background-color: darkgrey;
+}
+
+#contacto-gracias img{
+  margin: 0 auto;
+  display: block;
 }
 
 #contacto h2{
@@ -334,6 +339,11 @@ body{
 
 .bottom-menu li{
   margin-bottom: 10px;
+}
+
+
+#footer1 .plp-valores{
+  width:80%;
 }
 
 #footer2{
@@ -407,33 +417,29 @@ body{
   margin-top: 10px;
 }
 
-.servicios #contact-form button{
-  background-color: red;
-  color: white;
-  font-size: 16px;
-  width: 200px;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  margin-top: 5%;
-  float: none;
-  text-align: center;
-  display: block;
+.servicios-form button{
+  width: 200px !important;
+  margin-top: 8%;
+  font-weight: bold;
 
 }
 
-.servicios .servicios-form{
+.servicios-form{
   border-top: solid 1px grey;
   border-bottom: solid 1px grey;
   padding: 10px;
   margin-bottom: 20px;
 }
 
-.servicios .servicios-form img{
-  width: 35%;
+.servicios-form img{
+  width: 50%;
 }
 
-.servicios .servicios-form .servicios-form-inner{
+.servicios-form button img{
+  width: 10%;
+}
+
+.servicios-form .servicios-form-inner{
   margin: 0 auto;
   float: none;
 }
@@ -535,6 +541,7 @@ body{
 
   .servicios-page-text {
     margin-top: 10px;
+    font-size:20px;
   }
 
   .servicios-page-text span {
@@ -555,6 +562,18 @@ body{
     float: none;
   }
 
+  .servicios-form button, .servicios-form img{
+    margin: 0 auto 10px auto !important;
+    float: none !important;
+    display: block;
+  }
+
+  .servicios-form button img{
+    display: inline !important;
+    width: 10% !important;
+    padding-top: 5px;
+  }
+
   #proyectos-inner.row, #proyectos-inner .row{
     margin-left: 10px;
     margin-right: 10px;
@@ -562,5 +581,22 @@ body{
 
   #proyectos-inner .proyecto-item{
     margin-bottom: 20px;
+  }
+
+  .plp-valores{
+    width: 90% !important;
+  }
+
+  .empresas-carrousel .carrousel-item, .empresas-carrousel .slick-slide {
+    height: 250px !important;
+  }
+
+  #empresas-inner div{
+    margin: 0 auto !important;
+  }
+
+  #footer1 {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

@@ -2,12 +2,46 @@
     <div id="contact-form" class="col-lg-5 center-block">
         <h2 class="text-center text-bold header">HAGAMOS HISTORIA JUNTOS</h2>
         <span class="text-center text-bold center-block">Contáctanos!</span>
-        <form>
-            <input class="center-block" placeholder="Nombre" type="text" />
-            <input class="center-block" placeholder="Correo electrónico" type="text" />
-            <input class="center-block" placeholder="Número telefónico" type="text" />
-            <textarea class="center-block" placeholder="Cuéntanos cómo te podemos ayudar?"></textarea>
-            <button class="text-center center-block" type="submit"><img src="img/mobile_icono_contacto.png" /> Enviar</button>
+        <form id="contact-form-element">
+            <input id="name" required data-validation="text"  name="nombre" class="center-block" placeholder="Nombre" type="text" />
+            <input id="email" data-validation="email" required name="email" class="center-block" placeholder="Correo electrónico" type="text" />
+            <input id="telefono" data-validation="phoneUS"  name="telefono" class="center-block" placeholder="Número telefónico" type="text" />
+            <textarea id="mensaje" required name="mensaje" class="center-block" placeholder="Cuéntanos, ¿cómo te podemos ayudar?"></textarea>
+            <button id="contact-form-button" class="text-center center-block" type="submit"><img src="img/mobile_icono_contacto.png" /> Enviar</button>
         </form>
     </div>
 </div>
+
+<div id="contacto-gracias" class="hidden">
+    <div class="center-block">
+        <h1 class="text-center text-bold header">GRACIAS POR CONTACTARNOS</h1>
+        <h4 class="text-center text-bold center-block">En breve nos comunicaremos contigo</h4>
+        <img src="img/desktop_gracias.png"/>
+    </div>
+</div>
+
+<script>
+    $("#contact-form-element").submit(function(e) {
+        console.log('enviando');
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "sendmail.php",
+            dataType: "json",
+            data: {
+                email: $("#email").val(),
+                nombre: $("#name").val(),
+                telefono: $("#telefono").val(),
+                mensaje: $("#mensaje").val()
+            },
+            success: function (result) {
+                if (result.respond) {
+                    $("#contacto-gracias").removeClass('hidden');
+                    $("#contacto").fadeOut();
+                }
+            }
+        });
+
+        return 0;
+    });
+</script>
