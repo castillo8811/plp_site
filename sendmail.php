@@ -26,7 +26,7 @@ $body .= '<strong>Mensaje:</strong>' . $mensaje. '<br /><br />';
 
 
 // Create the Transport
-$transport = Swift_SmtpTransport::newInstance('localhost', 1025);
+$transport = Swift_SmtpTransport::newInstance('localhost',25);
 // Create the Mailer using your created Transport
 $mailer  = Swift_Mailer::newInstance($transport);
 $message = Swift_Message::newInstance($subject)

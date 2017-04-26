@@ -295,6 +295,7 @@ body{
 #contacto span{
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
 #contact-form{
@@ -604,5 +605,14 @@ body{
   #footer1 {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  #contacto-gracias{
+    margin: 0 5px 0 5px;
+    padding-top: 10px;
+  }
+
+  #contacto-gracias img{
+    width: 85%;
   }
 }
