@@ -79,6 +79,7 @@ function ServiciosCtrl($scope, $http, $timeout,$route, ngMeta, Socialshare) {
         ngMeta.setTag('description',description);
         ngMeta.setTag('keywords',keywords);
         $scope.shareText=description;
+        $scope.shareUrl=location.href;
     }else{
         var title='PLP Comunicación | Servicios';
         var description='Conoce la propuesta de diseño y programación que PLP Comunicación tienen para la creación de tu página web. Estamos en la Ciudad de México ';
@@ -88,6 +89,7 @@ function ServiciosCtrl($scope, $http, $timeout,$route, ngMeta, Socialshare) {
         ngMeta.setTag('description',description);
         ngMeta.setTag('keywords',keywords);
         $scope.shareText=description;
+        $scope.shareUrl=location.href;
     }
 }
 
