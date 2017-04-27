@@ -19,7 +19,7 @@
                     Diseñamos protocolos de prevención y soluciones, ante riesgos y/o crisis que pueda sufrir tu imagen pública debido a mensajes publicados en Redes Sociales.
                     *Exclusivo de PLP
                 </p>
-                <div class="text-center"><a data-service="creo">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/creo" data-service="creo">Más Información</a></div>
             </div>
         </div>
         <div class="col-lg-4">
@@ -29,7 +29,7 @@
                 <p>
                     Contamos con especialistas en redes sociales y community management que configurarán un plan de social media óptimo para alcanzar tus objetivos.
                 </p>
-                <div class="text-center"><a data-service="social-media">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/social-media" data-service="social-media">Más Información</a></div>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 <p>
                     Te ayudamos a crear y fortalecer tu negocio en línea. Y te orientamos sobre la instalación de cobro y pago en tiendas de conveniencia.
                 </p>
-                <div class="text-center"><a data-service="e-comerce">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/comercio-electronico" data-service="comercio-electronico">Más Información</a></div>
             </div>
         </div>
         <div class="col-lg-4">
@@ -50,7 +50,7 @@
                 <h2>CAMPAÑAS DIGITALES</h2>
                 <p>Generamos la mejor estrategia de publicidad (gráfica y escrita) para medios on line.</p>
                 <p>Creamos tus estrategias de Newsletter, Google Adsense, Google Adwords y redes sociales.</p>
-                <div class="text-center"><a data-service="digital-campaing">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/publicidad-digital" data-service="publicidad-digital">Más Información</a></div>
             </div>
         </div>
         <div class="col-lg-4 ">
@@ -58,7 +58,7 @@
                 <img src="img//06_icono_contenidos_web.png" />
                 <h2>CONTENIDOS WEB</h2>
                 <p>Creamos estrategias de comunicación escrita que favorezcan el posicionamiento en buscadores. Generamos contenidos originales y tenemos la capacidad de tropicalizar los textos para público de regiones geográficas específicas.</p>
-                <div class="text-center"><a data-service="web-content">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/contenido-web"  data-service="contenido-web">Más Información</a></div>
             </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
                 <img src="img//07_icono_aplicaciones_moviles.png" />
                 <h2>APLICACIONES MÓVILES</h2>
                 <p>Las APP son una buena opción para ofrecer una experiencia óptima en diversos dispositivos como tabletas o teléfonos móviles.</p>
-                <div class="text-center"><a data-service="movile-apps">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/aplicaciones-moviles" data-service="aplicaciones-moviles">Más Información</a></div>
             </div>
         </div>
         <div class="col-lg-4 ">
@@ -76,7 +76,7 @@
                 <img src="img//08_icono_cursos.png" />
                 <h2>CURSOS</h2>
                 <p>Ofrecemos diversos cursos para empresas como: experiencias de usuarios (UX), medición e interpretación de datos (Big data), optimización de redes sociales y posicionamiento SEO para buscadores.</p>
-                <div class="text-center"><a data-service="courses">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/cursos" data-service="cursos">Más Información</a></div>
             </div>
         </div>
         <div class="col-lg-4">
@@ -84,7 +84,7 @@
                 <img src="img//09_icono_consultorias.png" />
                 <h2>CONSULTORÍAS</h2>
                 <p>Te ayudamos a saber si tu equipo de trabajo, agencia o proveedor te esta ofreciendo el mejor servicio, auditamos su servicios y procesos para llegar a los objetivos deseados.</p>
-                <div class="text-center"><a data-service="consulting">Más Información</a></div>
+                <div class="text-center"><a href="#!/servicios/consultoria" data-service="consultoria" >Más Información</a></div>
             </div>
         </div>
     </div>
@@ -102,11 +102,11 @@
                 }, 500);
             }
         });
+    });
 
+    setTimeout(function(){
         url_parts=location.toString().split('/');
-
         service=url_parts[url_parts.length-1];
-        console.log(service);
         if($('#' + service).length) {
             $('.servicios-page-element').addClass('hidden');
             $('#' + service).removeClass('hidden');
@@ -115,5 +115,6 @@
                 scrollTop: $('#header-wrapper').offset().top
             }, 500);
         }
-    });
+    },100);
+
 </script>

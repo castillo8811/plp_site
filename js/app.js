@@ -13,51 +13,61 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('example359', []).
+var app = angular.module('plp', ['ngMeta', '720kb.socialshare']).
     config(['$routeProvider', function ($routeProvider) {
       $routeProvider.
-        when('/', { templateUrl: 'pages/index.html', activetab: 'projects', controller: HomeCtrl }).
-        when('/project/:projectId', {
-          templateUrl: function (params) { return 'pages/' + params.projectId + '.html'; },
-          controller: ProjectCtrl,
-          activetab: 'projects'
-        }).
+        when('/',
+          { templateUrl: 'pages/index.html',
+              activetab: 'projects',
+              controller: HomeCtrl,
+              meta: {
+                  'title': 'PLP Comunicación',
+                  'titleSuffix': '',
+                  'description': ' PLP Comunicación expertos en comunicación digital, diseño, ux, imagen crisis y reputación de marca on line. Agencia en CDMX',
+                  'keywords':'programación, comunicación, diseño, crisis, ux, reputación de marca on line.'
+              }
+          }).
         when('/servicios/:serviceId', {
           templateUrl: 'pages/servicios.html',
           controller: ServiciosCtrl,
-          activetab: 'servicios'
+          activetab: 'servicios',
+          meta: {
+              'title': 'PLP Comunicación | Servicios',
+              'titleSuffix': ' | Servicios',
+              'description': 'Servicios'
+          }
         }).
         when('/servicios', {
           templateUrl: 'pages/servicios.html',
           controller: ServiciosCtrl,
-          activetab: 'servicios'
+          activetab: 'servicios',
+          meta: {
+              'title': 'PLP Comunicación | Servicios',
+              'description': 'Servicios'
+          }
         }).
         when('/proyectos', {
            templateUrl: 'pages/proyectos.html',
            controller: ProjectCtrl,
-           activetab: 'proyectos'
+           activetab: 'proyectos',
+          meta: {
+              'title': 'PLP Comunicación | Empresas',
+              'description': 'Empresas'
+          }
         }).
         when('/contacto', {
            templateUrl: 'pages/contacto.html',
            controller: ContactoCtrl,
-           activetab: 'contacto'
+           activetab: 'contacto',
+          meta: {
+              'title': 'PLP Comunicación | Contacto',
+              'description': 'Contacto'
+          }
         }).
         otherwise({ redirectTo: '/' });
-    }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
+    }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route","ngMeta",'Socialshare', function ($scope, $http, $browser, $timeout, $route,ngMeta, Socialshare) {
 
-        $scope.$on("$routeChangeSuccess", function (scope, next, current) {
-          $scope.part = $route.current.activetab;
-        });
-
-        // save the 'Contact Us' form
-        $scope.save = function () {
-          $scope.loaded = true;
-          $scope.process = true;
-          $http.post('sendemail.php', $scope.message).success(function () {
-              $scope.success = true;
-              $scope.process = false;
-          });
-        };
+        ngMeta.init();
   }]);
 
 app.config(['$locationProvider', function($location) {

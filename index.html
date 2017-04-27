@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="example359" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" ng-app="plp" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>PLP Comunicación</title>
     <link rel="shortcut icon" href="img/ico/favicon.ico" type="image/vnd.microsoft.icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title ng-bind="ngMeta.title"></title>
+
+    <!-- Arbitrary tags -->
+    <meta name="author" content="PLP Comunicación" />
+    <meta name="description" content="{{ngMeta.description}}" />
+    <meta name="keywords" content="{{ngMeta.keywords}}" />
+
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +25,8 @@
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
+    <script src="js/ngMeta.js"></script>
+    <script src="js/angular-socialshare.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/jquery.form-validator.min.js"></script>
