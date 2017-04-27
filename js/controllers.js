@@ -77,7 +77,13 @@ function ServiciosCtrl($scope, $http, $timeout,$route, ngMeta, Socialshare) {
 
         ngMeta.setTitle(title);
         ngMeta.setTag('description',description);
+        ngMeta.setTag('og:description',description);
+        ngMeta.setTag('og:title',title);
+        ngMeta.setTag('og:url',location.href);
+
+
         ngMeta.setTag('keywords',keywords);
+
         $scope.shareText=description;
         $scope.shareUrl=location.href;
     }else{
@@ -88,6 +94,9 @@ function ServiciosCtrl($scope, $http, $timeout,$route, ngMeta, Socialshare) {
         ngMeta.setTitle(title);
         ngMeta.setTag('description',description);
         ngMeta.setTag('keywords',keywords);
+        ngMeta.setTag('og:description',description);
+        ngMeta.setTag('og:title',title);
+        ngMeta.setTag('og:url',location.href);
         $scope.shareText=description;
         $scope.shareUrl=location.href;
     }
