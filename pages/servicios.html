@@ -1,13 +1,18 @@
 <div id="social-shares">
     <div id="social-shares-inner">
         <div id="fb-share">
-            <img  src="img/btn_share_facebook.png" class="btn btn-medium font-bold" socialshare="" socialshare-provider="facebook" socialshare-type="sharer" socialshare-text="{{shareText}}" socialshare-url="{{location.href}}" socialshare-popup-height="300" socialshare-popup-width="400" socialshare-trigger="click" />
+            <img  src="img/btn_share_facebook.png" class="btn btn-medium font-bold" socialshare-media="https://www.google.it/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" socialshare="" socialshare-provider="facebook" socialshare-type="sharer" socialshare-text="{{shareText}}" socialshare-url="{{location.href}}" socialshare-popup-height="300" socialshare-popup-width="400" socialshare-trigger="click" />
         </div>
         <div id="tw-share">
-            <img src="img/btn_share_twitter.png" class="btn btn-medium font-bold" socialshare="" socialshare-provider="twitter" socialshare-via="twitter" socialshare-text="{{shareText}}" socialshare-url="{{location.href}}" socialshare-popup-height="300" socialshare-popup-width="400" socialshare-trigger="click" />
+            <img src="img/btn_share_twitter.png" class="btn btn-medium font-bold" socialshare-media="https://www.google.it/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" socialshare="" socialshare-provider="twitter" socialshare-via="twitter" socialshare-text="{{shareText}}" socialshare-url="{{location.href}}" socialshare-popup-height="300" socialshare-popup-width="400" socialshare-trigger="click" />
         </div>
-        <div id="whatsapp-share" >
-            <img src="img/btn_share_whats_app.png" class="btn btn-medium font-bold" socialshare="" socialshare-provider="whatsapp" socialshare-url="{{location.href}}" socialshare-text="{{shareText}}">
+        <div id="email-share" class="visible-md-block visible-lg-block">
+            <img src="img/mobile_icono_contacto.png" class="btn btn-medium font-bold" socialshare="" socialshare-provider="email" socialshare-body="{{shareText + '' +location.href }}" socialshare-to="test@test.ing" socialshare-cc="test@test.ing" socialshare-media="https://www.google.it/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" socialshare-subject="Sevicios de PLP Comunicación" socialshare-popup-height="300" socialshare-popup-width="400">
+        </div>
+        <div id="whatsapp-share" class="visible-xs" >
+            <a socialshare="" socialshare-provider="whatsapp" socialshare-url="{{location.href}}" socialshare-text="{{shareText}}">
+                <img src="img/btn_share_whats_app.png" class="btn btn-medium font-bold">
+            </a>
         </div>
         <div class="both"></div>
     </div>
